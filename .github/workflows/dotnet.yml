@@ -23,7 +23,7 @@ jobs:
         run: |
           dotnet publish -c Release -o GitHubActionsCore .\GitHubActions
       - name: Deploy to IIS
-run: |
-  iisreset /stop
-  Copy-Item ./GitHubActions/* C:/inetpub/wwwroot/GitHubActions -Recurse -Force
-  iisreset /start
+        run: |
+          iisreset /stop
+          Copy-Item ./GitHubActions/* C:/inetpub/wwwroot/GitHubActions -Recurse -Force
+          iisreset /start
